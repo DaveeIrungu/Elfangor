@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "783822995761",
+    "firebase_url": "https://elfangor-26435.firebaseio.com",
+    "project_id": "elfangor-26435",
+    "storage_bucket": "elfangor-26435.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783822995761:android:68e925ea8c14f24a89b010",
+        "android_client_info": {
+          "package_name": "com.davee.elfangor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783822995761-cbnc4j0ha3cjuji1favnftmr3eu7virc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.davee.elfangor",
+            "certificate_hash": "9e7eab6fb27fc63c4dba74fcfa83d3c092ede1f9"
+          }
+        },
+        {
+          "client_id": "783822995761-smi64idjj079allrfiltv58ps03fgqbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXT9PenmdE3VjFMU9khvC2aGq6T52exUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783822995761-smi64idjj079allrfiltv58ps03fgqbh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
