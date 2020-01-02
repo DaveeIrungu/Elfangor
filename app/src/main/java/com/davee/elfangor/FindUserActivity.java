@@ -9,8 +9,10 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.telephony.TelephonyManager;
-import android.widget.LinearLayout;
 
+import com.davee.elfangor.User.UserListAdapter;
+import com.davee.elfangor.User.UserObject;
+import com.davee.elfangor.Utils.CountryToPhonePrefix;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -62,7 +64,7 @@ public class FindUserActivity extends AppCompatActivity {
 
             if (!String.valueOf(phone.charAt(0)).equals("+"))
                 phone = CountryCodePrefix + phone;
-            UserObject mContact = new UserObject(name, phone);
+            UserObject mContact = new UserObject("", name, phone);
             contactList.add(mContact);
             getUserDetails(mContact);
         }
@@ -83,7 +85,7 @@ public class FindUserActivity extends AppCompatActivity {
                         if (childSnapshot.child("name").getValue() != null)
                             name = childSnapshot.child("name").getValue().toString();
 
-                        UserObject mUser = new UserObject(name, phone);
+                        UserObject mUser = new UserObject(childSnapshot.getKey(), name, phone);
                         if (name.equals(phone))
                             for (UserObject mContactIterator : contactList) {
                                 if (mContactIterator.getPhone().equals(mUser.getPhone())) {
@@ -122,7 +124,7 @@ public class FindUserActivity extends AppCompatActivity {
     }
 
     private void initializeRecyclerView() {
-        mUserList = findViewById(R.id.userList);
+        mUserList = findViewById(R.id.chatList);
         mUserList.setNestedScrollingEnabled(false);
         mUserList.setHasFixedSize(false);
 

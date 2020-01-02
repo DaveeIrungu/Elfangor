@@ -8,7 +8,7 @@
     tools:context=".FindUserActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/userList"
+        android:id="@+id/chatList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
